@@ -20,18 +20,18 @@ public final class ActionCode {
     public static final int DELETE_FAILURE = -7;
 
     public static String message(int code) {
-        switch (code) {
-            case INSERT_SUCCESS: return Message.INSERT_SUCCESS;
-            case UPDATE_SUCCESS: return Message.UPDATE_SUCCESS;
-            case INSERT_FAILURE: return Message.INSERT_FAILURE;
-            case NOT_UNIQUE: return Message.NOT_UNIQUE;
-            case INCORRECT_INFORMATION: return Message.INCORRECT_INFORMATION;
-            case UNAUTHORIZED_ACCESS: return Message.AUTHORIZATION_DENIED;
-            case UPDATE_FAILURE: return Message.UPDATE_FAILURE;
-            case PARTIAL_UPDATE_FAILURE: return Message.PARTIAL_UPDATE_FAILURE;
-            case DELETE_SUCCESS: return Message.DELETE_SUCCESS;
-            case DELETE_FAILURE: return Message.DELETE_FAILURE;
-            default: return Constant.BLANK_STRING_VALUE;
-        }
+        return switch (code) {
+            case INSERT_SUCCESS -> Message.INSERT_SUCCESS;
+            case UPDATE_SUCCESS -> Message.UPDATE_SUCCESS;
+            case INSERT_FAILURE -> Message.INSERT_FAILURE;
+            case NOT_UNIQUE -> Message.NOT_UNIQUE;
+            case INCORRECT_INFORMATION -> Message.INCORRECT_INFORMATION;
+            case UNAUTHORIZED_ACCESS -> Message.AUTHORIZATION_DENIED;
+            case UPDATE_FAILURE -> Message.UPDATE_FAILURE;
+            case PARTIAL_UPDATE_FAILURE -> Message.PARTIAL_UPDATE_FAILURE;
+            case DELETE_SUCCESS -> Message.DELETE_SUCCESS;
+            case DELETE_FAILURE -> Message.DELETE_FAILURE;
+            default -> Constant.BLANK_STRING_VALUE;
+        };
     }
 }
